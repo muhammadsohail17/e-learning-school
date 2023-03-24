@@ -71,4 +71,10 @@ video {
         padding: 10px 20px;
         background-color: #225470;
     }
+
+    .custom-nav-item:hover {
+        background-color: none;
+        border: none;
+        border-radius: none;
+    }
 }

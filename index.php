@@ -20,7 +20,7 @@ family=Montserrat:wght@100&family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel
 
 <body>
 <!-- Start Navigation -->
- <nav class="navbar navbar-expand-sm navbar-dark bg-dark pl-5 fixed-top">
+ <nav class="navbar navbar-expand-sm navbar-dark pl-5 fixed-top">
   <a class="navbar-brand" href="index.php">iSchool</a>
   <span class="navbar-text">Learn and implement</span>
   <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -95,6 +95,113 @@ family=Montserrat:wght@100&family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel
     </div>
 </div>
 <!-- End text banner -->
+
+<!-- Start Most Popular Course-->
+<div class="container mt-5">
+    <h1 class="text-center">Popular Course</h1>
+    <!--Start Most Popular First Card-->
+    <div class="card-deck mt-4">
+    <a href="#" class="btn" style="text-align:left; padding:0px; margin:0px">
+            <div class="card">
+                <img src="images/laptop.jpg" class="card-img-top" alt="laptop"/>
+                <div class="card-body">
+                    <h5 class="card-title">Learn Guiter Easy Way</h5>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text d-inline">Price: <small><del>&#8377 2000</del></small>
+                    <span class="font-weight-bolder">&#8377 200</span>
+                </p>
+                <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="btn" style="text-align:left; padding:0px; margin:0px">
+            <div class="card">
+                <img src="images/laptop.jpg" class="card-img-top" alt="laptop"/>
+                <div class="card-body">
+                    <h5 class="card-title">Learn Guiter Easy Way</h5>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text d-inline">Price: <small><del>&#8377 2000</del></small>
+                    <span class="font-weight-bolder">&#8377 200</span>
+                </p>
+                <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="btn" style="text-align:left; padding:0px; margin:0px">
+            <div class="card">
+                <img src="images/laptop.jpg" class="card-img-top" alt="laptop"/>
+                <div class="card-body">
+                    <h5 class="card-title">Learn Guiter Easy Way</h5>
+                    <p class="card-text ">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text d-inline">Price: <small><del>&#8377 2000</del></small>
+                    <span class="font-weight-bolder">&#8377 200</span>
+                </p>
+                <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+            </div>
+        </div>
+    </a>
+    </div>
+<!--End Most Popular First Card-->
+   <!--Start Most Popular Second Card-->
+   <div class="card-deck mt-4">
+    <a href="#" class="btn" style="text-align:left; padding:0px; margin:0px;">
+            <div class="card">
+                <img src="images/programming.png" class="card-img-top" alt="Python"/>
+                <div class="card-body">
+                    <h5 class="card-title">Learn Python</h5>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text d-inline">Price: <small><del>&#8377 3000</del></small>
+                    <span class="font-weight-bolder">&#8377 300</span>
+                </p>
+                <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+               </div>
+            </div>
+        </a>
+        <a href="#" class="btn" style="text-align:left; padding:0px; margin:0px;">
+            <div class="card">
+                <img src="images/programming.png" class="card-img-top" alt="Python"/>
+                <div class="card-body">
+                    <h5 class="card-title">Learn Python</h5>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text d-inline">Price: <small><del>&#8377 3000</del></small>
+                    <span class="font-weight-bolder">&#8377 300</span>
+                </p>
+                <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+               </div>
+            </div>
+        </a>
+        <a href="#" class="btn" style="text-align:left; padding:0px; margin:0px;">
+            <div class="card">
+                <img src="images/programming.png" class="card-img-top" alt="Python"/>
+                <div class="card-body">
+                    <h5 class="card-title">Learn Python</h5>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text d-inline">Price: <small><del>&#8377 3000</del></small>
+                    <span class="font-weight-bolder">&#8377 300</span>
+                </p>
+                <a class="btn btn-primary text-white font-weight-bolder float-right" href="#">Enroll</a>
+               </div>
+            </div>
+        </a>
+   </div>
+<!--End Most Popular Second Card-->
+<div class="text-center m-2">
+    <a class="btn btn-danger btn-sm" href="#">View All Course</a>
+</div>
+</div>
+<!-- End Most Popular Course-->
     
 
 
