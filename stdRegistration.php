@@ -28,7 +28,7 @@
 <!-- End Student registration form -->
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Sign Up</button>
+          <button type="button" class="btn btn-primary" onclick="addStd()">Sign Up</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>

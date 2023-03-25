@@ -34,7 +34,7 @@ family=Montserrat:wght@100&family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel
         <a class="nav-link" href="courses.php">Courses</a>
       </li>
       <li class="nav-item custom-nav-item">
-        <a class="nav-link" href="#">Payment Status</a>
+        <a class="nav-link" href="paymentStatus.php">Payment Status</a>
       </li>
       <li class="nav-item custom-nav-item">
         <a class="nav-link" href="#">My Profile</a>

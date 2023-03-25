@@ -2,7 +2,7 @@
 <body>
 <!-- Start Navigation -->
 <?php
-include_once('./header.php');
+include_once('./common/header.php');
 ?>
 <!-- End Navigation -->
 
@@ -44,12 +44,12 @@ include_once('./social.php');
 
 <!-- Start About Section -->
 <?php
-include_once('./aboutUs.php');
+include_once('./common/aboutUs.php');
 ?>
 <!-- End About Section -->
 <!-- Start Footer -->
 <?php
-include_once('./footer.php');
+include_once('./common/footer.php');
 ?>
 <!-- End Footer -->
 
@@ -79,5 +79,8 @@ include_once('./adminLogin.php');
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/all.min.js"></script>
+
+<!-- Student ajax call JavaScript-->
+<script type="text/javascript" src="js/ajaxrequest.js"></script>
 </body>
 </html>
