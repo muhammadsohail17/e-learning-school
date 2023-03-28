@@ -61,7 +61,7 @@ include_once('./stdRegistration.php');
 
 <!--Start Student Login modal -->
 <?php
-include_once('./stdLogin.php')
+include_once('./stdLogin.php');
 ?>
 <!--End Student Log in modal -->
 

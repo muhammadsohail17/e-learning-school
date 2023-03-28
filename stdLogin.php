@@ -23,7 +23,8 @@
 <!-- End Student login form -->
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id="stdloginbtn">Login</button>
+        <small id="loginMsg"></small>
+        <button type="button" class="btn btn-primary" onclick="checkStdLogin()" id="stdloginbtn">Login</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
       </div>
     </div>

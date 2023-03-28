@@ -55,5 +55,25 @@ if (isset($_POST['operation']) && $_POST['operation'] === "email_validation") {
     }
 }
 
+//student Login verification
+if (isset($_POST['checkLogemail']) && isset($_POST['stdLogEmail']) && isset($_POST['stdLogPassword'])) {
+    $stdLogEmail = filter_var($_POST['stdLogEmail'], FILTER_SANITIZE_EMAIL);
+    $stdLogPassword = filter_var($_POST['stdLogPassword'], FILTER_SANITIZE_STRING);
+
+    $sql = "SELECT std_email, std_password FROM student WHERE std_email = '".mysqli_real_escape_string($conn, $stdLogEmail)."' AND std_password = '".mysqli_real_escape_string($conn, $stdLogPassword)."'";
+
+    $res = $conn->query($sql);
+
+    $row = $res->num_rows;
+
+    if ($row === 1) {
+        $result['status'] = 1;
+        $result['message'] = "User Login successfully";
+    } elseif ($row === 0) {
+        $result['status'] = 0;
+        $result['message'] = "Invalid email or password";
+    }
+}
+
 echo json_encode($result);
 ?>

@@ -77,7 +77,37 @@ function addStd() {
       
           });
     }
-  }
+}
+
+//Ajax call for student Login verification
+function checkStdLogin() {
+    // code to be executed when the element is clicked
+    let stdLogEmail = $("#stdloginemail").val();
+    let stdLogPassword = $("#stdloginpassword").val();
+    $.ajax({
+        "url": "student/addstudent.php",
+            "method": "POST",
+            "data": {
+              "checkLogemail":"checklogmail",
+              "stdLogEmail":stdLogEmail,
+              "stdLogPassword":stdLogPassword
+            },
+            success: function (data) {
+                console.log(data);
+                if(data.status){
+                    console.log("worked corectyl");
+                    $("#loginMsg").html('<small class="alert alert-danger">'+data.message+'</small>');
+                } else if (data.status) {
+                    $("#loginMsg").html('<div class="spinner-border text-success" role="status">'+data.message+'</div>');
+                }
+            
+            },
+            error: function(textStatus, errorThrown) {
+                console.log("An error occurred. Status:", textStatus, "Error thrown:", errorThrown);
+              }
+    })
+}
+
   //Empty All Fields
   function clearStdRegField(){
     $("#stdRegForm").trigger("reset");
