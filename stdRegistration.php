@@ -10,18 +10,21 @@
       </div>
       <div class="modal-body">
         <!-- start Student registration form -->
-<form id="stdregfrom">
+<form id="stdRegForm">
   <div class="form-group">
     <i class="fa-solid fa-user"></i><label for="stdregname" class="pl-2 font-weight-bold">Name</label>
+    <small id="errorMsg1"></small>
     <input type="text" class="form-control" id="stdregname"placeholder="Name" name="stdregname">
   </div>
   <div class="form-group">
     <i class="fa-solid fa-envelope"></i><label for="stdregemail" class="pl-2 font-weight-bold">Email</label>
+    <small id="errorMsg2"></small>
     <input type="email" class="form-control" id="stdregemail" name="stdregemail" placeholder="Email">
     <small class="form-text">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
     <i class="fa-solid fa-lock"></i></i><label for="stdregpassword" class="pl-2 font-weight-bold">Password</label>
+    <small id="errorMsg3"></small>
     <input type="password" class="form-control" id="stdregpassword" name="stdregpassword" placeholder="Password">
   </div>
 </form>
@@ -29,7 +32,7 @@
       </div>
       <div class="modal-footer">
         <span id="successMsg"></span>
-          <button type="button" class="btn btn-primary" onclick="addStd()">Sign Up</button>
+          <button type="button" id="signup" class="btn btn-primary" onclick="addStd()">Sign Up</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
