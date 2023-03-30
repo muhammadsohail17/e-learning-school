@@ -1,4 +1,8 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
 include_once("../dbConnection.php");
 
 //Insert student
@@ -41,10 +45,10 @@ if (isset($_POST['operation']) && $_POST['operation'] === "email_validation") {
     
         try {
             if ($conn->query($sql) == true) {
-                $result['message'] = "Ok";
+                $result['message'] = "User Registered successfully!";
                 $result['status'] = 1;
             } else {
-                $result['message'] = "Failed";
+                $result['message'] = "User Registration Failed!";
                 $result['status'] = 0;
             }
         } catch (Exception $ex) {
@@ -56,6 +60,8 @@ if (isset($_POST['operation']) && $_POST['operation'] === "email_validation") {
 }
 
 //student Login verification
+//check SESSION
+if(!isset($_SESSION['is_login'])){
 if (isset($_POST['checkLogemail']) && isset($_POST['stdLogEmail']) && isset($_POST['stdLogPassword'])) {
     $stdLogEmail = filter_var($_POST['stdLogEmail'], FILTER_SANITIZE_EMAIL);
     $stdLogPassword = filter_var($_POST['stdLogPassword'], FILTER_SANITIZE_STRING);
@@ -67,12 +73,17 @@ if (isset($_POST['checkLogemail']) && isset($_POST['stdLogEmail']) && isset($_PO
     $row = $res->num_rows;
 
     if ($row === 1) {
-        $result['status'] = 1;
+        json_encode($result['status'] = 1);
+        $_SESSION['is_login'] = true;
+        $_SESSION['stdLogEmail'] = $stdLogEmail;
         $result['message'] = "User Login successfully";
     } elseif ($row === 0) {
-        $result['status'] = 0;
+        json_encode($result['status'] = 0);
         $result['message'] = "Invalid email or password";
+    } else {
+        $result['message'] = "There is some error.!";
     }
+}
 }
 
 echo json_encode($result);

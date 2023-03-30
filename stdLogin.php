@@ -10,7 +10,7 @@
       </div>
       <div class="modal-body">
         <!-- start Student login form -->
-        <form id="stdloginform">
+        <form id="stdloginform" method="POST">
             <div class="form-group">
                 <i class="fa-solid fa-envelope"></i><label for="stdloginemail" class="pl-2 font-weight-bold">Email</label>
                 <input type="email" class="form-control" id="stdloginemail" name="stdloginemail" placeholder="Email">

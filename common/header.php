@@ -36,18 +36,27 @@ family=Montserrat:wght@100&family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel
       <li class="nav-item custom-nav-item">
         <a class="nav-link" href="paymentStatus.php">Payment Status</a>
       </li>
-      <li class="nav-item custom-nav-item">
+      <?php
+      session_start();
+      if (isset($_SESSION['is_login'])) {
+        echo '
+        <li class="nav-item custom-nav-item">
         <a class="nav-link" href="#">My Profile</a>
-      </li>
-      <li class="nav-item custom-nav-item">
-        <a class="nav-link" href="#">Logout</a>
-      </li>
-      <li class="nav-item custom-nav-item">
+        </li>
+        <li class="nav-item custom-nav-item">
+        <a class="nav-link" href="logout.php">Logout</a>
+        </li>';
+      } else {
+        echo '
+        <li class="nav-item custom-nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#stuLogModalcenter">Login</a>
-      </li>
-      <li class="nav-item custom-nav-item">
+        </li>
+        <li class="nav-item custom-nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#stuRegModalcenter">Signup</a>
-      </li>
+        </li>';
+      }
+      ?>
+      
       <li class="nav-item custom-nav-item">
         <a class="nav-link" href="#">Feedback</a>
       </li>

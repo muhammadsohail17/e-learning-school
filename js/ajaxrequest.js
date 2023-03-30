@@ -60,8 +60,7 @@ function addStd() {
               "std_password":std_password
             },
             success: function(data) {
-              console.log(data);
-        
+            //   console.log(data);
               if (data.status) {
                 $("#successMsg").html("<span class='alert alert-success'>Registration successful</span>");
                 clearStdRegField();
@@ -75,7 +74,7 @@ function addStd() {
               console.log("An error occurred. Status:", textStatus, "Error thrown:", errorThrown);
             }
       
-          });
+        });
     }
 }
 
@@ -85,27 +84,31 @@ function checkStdLogin() {
     let stdLogEmail = $("#stdloginemail").val();
     let stdLogPassword = $("#stdloginpassword").val();
     $.ajax({
-        "url": "student/addstudent.php",
+            "url": "student/addstudent.php",
             "method": "POST",
+            "dataType": "json",
             "data": {
               "checkLogemail":"checklogmail",
               "stdLogEmail":stdLogEmail,
               "stdLogPassword":stdLogPassword
             },
-            success: function (data) {
+            success:function(data) {
                 console.log(data);
-                if(data.status){
-                    console.log("worked corectyl");
+                if(data.status === 0){
                     $("#loginMsg").html('<small class="alert alert-danger">'+data.message+'</small>');
-                } else if (data.status) {
+                } else if (data.status === 1) {
                     $("#loginMsg").html('<div class="spinner-border text-success" role="status">'+data.message+'</div>');
+                    setTimeout(() => {
+                        window.location.href = "index.php";
+                    },1000);
+                } else {
+                    $("#loginMsg").html('<small class="alert alert-danger">'+data.message+'</small>');
                 }
-            
-            },
+            },            
             error: function(textStatus, errorThrown) {
                 console.log("An error occurred. Status:", textStatus, "Error thrown:", errorThrown);
               }
-    })
+    });
 }
 
   //Empty All Fields
