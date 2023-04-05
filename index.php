@@ -80,7 +80,8 @@ include_once('./adminLogin.php');
 <script src="js/bootstrap.min.js"></script>
 <script src="js/all.min.js"></script>
 
-<!-- Student ajax call JavaScript-->
+<!-- Admin ajax call JavaScript-->
 <script type="text/javascript" src="js/ajaxrequest.js"></script>
+<script type="text/javascript" src="js/adminAjaxRequest.js"></script>
 </body>
 </html>

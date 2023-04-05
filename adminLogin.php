@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <!-- start Student login form -->
+        <!-- start Admin login form -->
         <form id="stdloginform">
             <div class="form-group">
                 <i class="fa-solid fa-envelope"></i><label for="adminloginemail" class="pl-2 font-weight-bold">Email</label>
@@ -20,10 +20,11 @@
                 <input type="password" class="form-control" id="adminloginpassword" name="adminloginpassword" placeholder="Password">
             </div>
         </form>
-<!-- End Student login form -->
+<!-- End Admin login form -->
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id="adminloginbtn">Login</button>
+      <small id="adminLoginMsg"></small>
+        <button type="button" class="btn btn-primary" id="adminloginbtn" onclick="checkAdminLogin()">Login</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
       </div>
     </div>
