@@ -18,7 +18,7 @@
             <input type="text" class="form-control" id="course_duration" name="course_duration">
         </div>
         <div class="form-group">
-            <label for="course_original_price">Course Origional Price</label>
+            <label for="course_original_price">Course Original Price</label>
             <input type="text" class="form-control" id="course_original_price" name="course_original_price">
         </div>
         <div class="form-group">

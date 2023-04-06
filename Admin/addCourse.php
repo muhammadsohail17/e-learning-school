@@ -1,11 +1,16 @@
 <!-- Header -->
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
     include_once ("../common/adminHeader.php");
     include_once ("../dbConnection.php");
 
-    // $result = [
-    //     "message" => null
-    // ];
+    if (isset($_SESSION['is_admin_login'])) {
+        $adminEmail = $_SESSION['adminLogEmail'];
+    } else {
+        echo "<script>location.href='../index.php'; </script>";
+    }
 
     if (isset($_REQUEST['courseSubmitBtn'])) {
         //checking for empty fileds
@@ -38,10 +43,8 @@
              '".mysqli_real_escape_string($conn, $course_original_price)."')";
              try {
                 if ($conn->query($sql) === true) {
-                    // $result['message'] = "<div class='alert alert-danger col-sm-6 ml-5 mt-2'> Unable to add Course!</div>";
                     $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2">Course Added Successfully</div>';
                 } else {
-                    // $result['message'] = "<div class='alert alert-danger col-sm-6 ml-5 mt-2'> Unable to add Course!</div>";
                     $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2"> Unable to add Course</div>';
                 }
             } catch (Exception $ex) {

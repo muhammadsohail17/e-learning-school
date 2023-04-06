@@ -74,7 +74,7 @@ family=Montserrat:wght@100&family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="adminChangePassword.php">
                                 <i class="fas fa-key"></i>
                                 Change Passsword
                             </a>

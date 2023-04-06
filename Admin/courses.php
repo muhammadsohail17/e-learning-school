@@ -1,7 +1,16 @@
 <!-- Header -->
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
     include_once ("../common/adminHeader.php");
     include_once ("../dbConnection.php");
+
+    if (isset($_SESSION['is_admin_login'])) {
+        $adminEmail = $_SESSION['adminLogEmail'];
+    } else {
+        echo "<script>location.href='../index.php'; </script>";
+    }
 ?>
 
 <div class="col-sm-9 mt-5">
@@ -30,7 +39,7 @@
                 <td>
                     <form action="editCourse.php" method="POST" class="d-inline">
                     <input type="hidden" name="id" value="<?php echo $row["course_id"]; ?>">
-                    <button type="submit" class="btn btn-info mr-2" name="view" value="View">
+                    <button type="submit" class="btn btn-info mr-2" name="edit" value="Edit">
                     <i class="fa-solid fa-pen-to-square"></i></button>
                     </form>
                     <form action="" method="POST" class="d-inline">

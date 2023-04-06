@@ -1,6 +1,16 @@
 <!-- Start admin Header -->
 <?php
-include_once("../common/adminHeader.php");
+if (!isset($_SESSION)) {
+    session_start();
+}
+    include_once ("../common/adminHeader.php");
+    include_once ("../dbConnection.php");
+
+    if (isset($_SESSION['is_admin_login'])) {
+        $adminEmail = $_SESSION['adminLogEmail'];
+    } else {
+        echo "<script>location.href='../index.php'; </script>";
+    }
 ?>
 <!-- End admin Header -->
             <!-- Start Card -->
