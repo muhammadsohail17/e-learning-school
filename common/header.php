@@ -41,7 +41,7 @@ family=Montserrat:wght@100&family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel
       if (isset($_SESSION['is_login'])) {
         echo '
         <li class="nav-item custom-nav-item">
-        <a class="nav-link" href="#">My Profile</a>
+        <a class="nav-link" href="student/studentProfile.php">My Profile</a>
         </li>
         <li class="nav-item custom-nav-item">
         <a class="nav-link" href="logout.php">Logout</a>

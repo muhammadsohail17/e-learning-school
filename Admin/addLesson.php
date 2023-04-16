@@ -1,5 +1,7 @@
 <!-- Header -->
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 if (!isset($_SESSION)) {
     session_start();
 }
@@ -25,10 +27,10 @@ if (!isset($_SESSION)) {
             // Check if uploaded file
             $lesson_link = $_FILES['lesson_link']['name'];
             $lesson_link_temp = $_FILES['lesson_link']['tmp_name'];
-            $link_folder = "../lessonvid".$lesson_link;
+            $link_folder = "../lessonvid/".$lesson_link;
             move_uploaded_file($lesson_link_temp, $link_folder);
 
-            $sql = "INSERT INTO lesson (lesson_name, lesson_desc, lesson_link,
+            $sql = "INSERT INTO `lesson` (lesson_name, lesson_desc, lesson_link,
              course_id, course_name)
              VALUES ('$lesson_name', '$lesson_desc', '$link_folder', '$course_id', '$course_name')";
              try {
@@ -72,7 +74,7 @@ if (!isset($_SESSION)) {
             <input type="file" class="form-control-file" id="lesson_link" name="lesson_link">
         </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-danger" id="lessonSubmitBtn" name="lessonSubmitBtn" onclick="buttonClicked()">Submit</button>
+            <button type="submit" class="btn btn-danger" id="lessonSubmitBtn" name="lessonSubmitBtn">Submit</button>
             <a href="./lessons.php" class="btn btn-secondary">Close</a>
         </div>
         <?php if(isset($msg)) {
@@ -80,11 +82,6 @@ if (!isset($_SESSION)) {
         } ?>
     </form>
 </div>
-<?php
-function buttonClicked() {
-    echo "buttonClicked()";
-}
-?>
 
 <!-- Footer -->
 <?php
